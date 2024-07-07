@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .grid-container {
+      display: grid;
+      width: 748px;
+      height: 748px;
+      grid-template-columns: 320px auto;     
+      grid-template-rows: 414px auto;
+      background-color: #000;
+      gap: 9px;
+    }
+    .one {
+      background-color: #E72F24;
+    }
+    .two {
+      background-color: #F0F1EC;
+    }
+    .three {
+      display: grid;
+      grid-template-rows: auto 20px;
+      gap: 9px;      
+    }
+    .three > * {
+      background-color: #F0F1EC;
+    }
+    .four {
+      display: grid;
+      grid-template-columns: 198px 153px auto;
+      grid-template-rows: auto 155px 20px;
+      gap: 9px;
+    }
+    .four > * {
+      background-color: #F0F1EC;
+    }
+    .four-one {
+      grid-area: 1 / 1 / 3 / 3;
+    }
+    .four-two {
+      border-bottom: 1px solid black;
+      background-color: #004592; 
+    }
+    .four-three {
+      background-color: #F9D01E;
+    }
+    .four-four  {
+      background-color: #232629;
+    }
+    .four-five {
+      grid-area: 2 / 3 / -1 / -1;
+    }    
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="grid-container">
+    <div class="item one"></div>
+    <div class="item two"></div>
+    <div class="item three">
+      <div class="three-one"></div>
+      <div class="three-two"></div>
+    </div>    
+    <div class="item four">
+      <div class="four-one"></div>
+      <div class="four-two"></div>
+      <div class="four-three"></div>
+      <div class="four-four"></div>
+      <div class="four-five"></div>
+    </div>
+  </div>
+</body>
+
+</html>
